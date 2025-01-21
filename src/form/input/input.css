@@ -1,0 +1,18 @@
+label {
+    color: black;
+    display: flex;
+    flex-direction: column;
+
+    input {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+        width: 80px;
+        height: 40px;
+    }
+}
+
+#input_country {
+    width: 180px;
+}

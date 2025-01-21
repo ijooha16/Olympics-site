@@ -1,0 +1,26 @@
+#form_container {
+    margin: 0;
+    padding: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 40px;
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    div {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+}
