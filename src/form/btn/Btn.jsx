@@ -17,7 +17,9 @@ const Btn = ({ medals, setMedals, country, setCountry, setDatas }) => {
         } else {
             const newData = [...localData, [country, medals]];  //새 정보 추가
             localStorage.setItem('olympics', JSON.stringify(newData)); //로컬스토리지에 저장
-            setDatas(newData); //상태 업데이트
+
+            const sorted = newData.sort((a,b) => b[1][0] - a[1][0]);
+            setDatas(sorted); //상태 업데이트
             setCountry('') //입력값 초기화
             setMedals(['','',''])
         }
@@ -37,7 +39,9 @@ const Btn = ({ medals, setMedals, country, setCountry, setDatas }) => {
                 data[0] === country ? [country, data[1].map((num, idx) => Number(num) + Number(medals[idx]))] : data
             );
             localStorage.setItem('olympics', JSON.stringify(newData)); // 로컬스토리지 업데이트
-            setDatas(newData); // 상태 업데이트
+
+            const sorted = newData.sort((a,b) => b[1][0] - a[1][0]);
+            setDatas(sorted); // 상태 업데이트
             setCountry('') //입력값 초기화
             setMedals(['','',''])
         }
