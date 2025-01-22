@@ -1,18 +1,27 @@
+import { useState } from 'react';
 import React from 'react'
 import './Form.css'
 import Country from './input/Country'
 import Medal from './input/Medal'
 import Btn from './btn/Btn'
 
-const Form = () => {
+const Form = ({ setDatas }) => {
+    const [medals, setMedals] = useState([0,0,0])
+    const [country, setCountry] = useState('')
+  
   return (
     <div id='form_container'>
         <form>
-          <Country/>
-          <Medal/>
+          <Country country={country} setCountry={setCountry}/>
+          <Medal medals={medals} setMedals={setMedals}/>
         </form>
         <div>
-          <Btn/>
+          <Btn 
+            medals={medals} 
+            setMedals={setMedals}
+            country={country} 
+            setCountry={setCountry}
+            setDatas={setDatas}/>
         </div>
     </div>
   )

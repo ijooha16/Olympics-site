@@ -1,5 +1,6 @@
 #form_container {
     margin: 0;
+    margin-bottom: 60px;
     padding: 0;
     
     display: flex;

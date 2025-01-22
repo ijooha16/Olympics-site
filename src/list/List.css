@@ -1,0 +1,86 @@
+#list_container {
+    margin: 0;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    border: 1px solid gray;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list_title {
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    color: black;
+    background-color: rgb(221, 221, 221);
+
+    .country {
+        width: 144px;
+        margin-right: 20px;
+    }
+
+    .idx {
+        margin-left: 12px;
+    }
+}
+
+.idx, .country, .medal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.idx {
+    width: 60px;
+    margin-right: 20px;
+}
+
+.medal {
+    width: 100px;
+}
+
+.hide {
+    display: none;
+}
+
+.lists {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    color: black;
+    
+    .country {
+        width: 144px;
+        margin-right: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
+
+.deletBtn {
+    width: 150px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+    box-sizing: border-box;
+
+    font-size: 14px;
+    
+    color: gray;
+
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

@@ -15,4 +15,9 @@ label {
 
 #input_country {
     width: 180px;
+    padding: 0 12px;
+}
+
+input[type='number'] {
+    text-align: center;
 }
