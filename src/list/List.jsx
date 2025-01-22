@@ -5,7 +5,6 @@ import DeleteData from './DeleteData'
 
 const List = ({ datas, setDatas }) => {
   const medal = ['Gold', 'Silver', 'Bronze']
-  //로컬 스토리지 데이터 불러오기
   
   return (
     <div id='list_container'>

@@ -6,7 +6,7 @@ import Medal from './input/Medal'
 import Btn from './btn/Btn'
 
 const Form = ({ setDatas }) => {
-    const [medals, setMedals] = useState([0,0,0])
+    const [medals, setMedals] = useState(['','',''])
     const [country, setCountry] = useState('')
   
   return (

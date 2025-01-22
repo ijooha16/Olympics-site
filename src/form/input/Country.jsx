@@ -8,7 +8,6 @@ const Country = ({ country, setCountry }) => {
 
   return (
     <label>
-      Country
       <input 
         id='input_country'
         type="text"

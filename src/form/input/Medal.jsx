@@ -14,12 +14,15 @@ const Medal = ({ medals, setMedals }) => {
       {rank.map((rank, idx) => {
         return (
           <label key={idx}>
-            {rank}
             <input 
               type="number" 
-              min='0'
+              min='1'
+              placeholder={rank}
               value={medals[idx]}
               onChange={e => inputHandler(e, idx)}
+              style={{
+
+              }}
             />
           </label>
         )

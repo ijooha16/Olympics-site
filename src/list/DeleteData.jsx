@@ -5,13 +5,9 @@ const DeleteData = ({ idx, setDatas }) => {
 
     
     const clickHandler = (idx) => {
-        const newData = localData.filter((_, index) => 
-            // index !== idx 
-        console.log(`index: ${index}, idx: ${idx}, match: ${index !== idx}`));
+        const newData = localData.filter((_, index) => index !== idx );
         
-        console.log('local data', localData)
-        console.log('new data', newData)
-        localData.setItem('olympics', JSON.stringify(newData)); //로컬스토리지에 저장
+        localStorage.setItem('olympics', JSON.stringify(newData)); //로컬스토리지에 저장
         setDatas(newData)
     }
     
