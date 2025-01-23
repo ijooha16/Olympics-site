@@ -3,21 +3,206 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  
+  #container {
+    margin: 0;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    width: 900px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  
+    h1 {
+      margin: 0;
+      margin-bottom: 100px;
+      color: black;
+    }
+  }
 }
 
-#container {
+#list_container {
   margin: 0;
-  padding: 60px 40px;
+  padding: 20px 12px;
   box-sizing: border-box;
-  width: 900px;
-  border-radius: 10px;
-  background-color: white;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  
+  .list_title {
+      height: 50px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 12px;
+      color: black;
+      background-color: rgb(221, 221, 221);
+  
+      border-radius: 10px;
+  
+      .country {
+          width: 144px;
+          margin-right: 20px;
+  
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+      }
+  
+      .idx {
+          margin-left: 12px;
+      }
+  }
+  
+  .idx, .country, .medal {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .idx {
+      width: 60px;
+      margin-right: 20px;
+      color: gray;
+  }
+  
+  .medal {
+      width: 100px;
+  
+      
+  }
+  
+  .hide {
+      display: none;
+  }
+  
+  .lists {
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      color: black;
+      
+      .country {
+          width: 144px;
+          margin-right: 20px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+      }
+  }
+  
+  .deletBtn {
+      width: 150px;
+      height: 40px;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      margin: 0;
+      padding: 0;
+      margin-left: 20px;
+      box-sizing: border-box;
+  
+      font-size: 14px;
+      
+      color: rgb(241, 166, 166);
+  
+      cursor: pointer;
+  
+      &:hover {
+          text-decoration: underline;
+      }
+  }
+  
+  #sort {
+      height: 30px;
+      width: 150px;
+      margin-left: 20px;
+      padding: 0;
+      box-sizing: border-box;
+  
+      text-align: center;
+      
+      color: gray;
+      border: 0;
+      border-radius: 10px;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0 0 4px rgba(162, 162, 162, 0.1);
+  }
+  
+  .no_data_alert {
+      margin: 20px 0;
+      color: rgb(255, 120, 120);
+  }
 }
 
-h1 {
+#form_container {
   margin: 0;
-  margin-bottom: 100px;
-  color: black;
+  margin-bottom: 40px;
+  padding: 0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 40px;
+
+  form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+  }
+
+  div {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+  }
 }
 
+input {
+  width: 80px;
+  height: 40px;
+  margin: 0;
+  margin-top: 8px;
+  padding: 0;
+  box-sizing: border-box;
+  
+  color: black;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+#input_country {
+  width: 180px;
+  padding: 0 12px;
+}
+
+input[type='number'] {
+  text-align: center;
+}
+
+input::placeholder {
+  color: lightgray;
+}
+
+.submitBtn {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  width: 144px;
+  height: 40px;
+  
+  background-color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

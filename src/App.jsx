@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css'
-import Form from './form/Form'
-import List from './list/List'
+import Form from './Components/Form'
+import List from './Components/List'
 
 function App() {
   const [datas, setDatas] = useState([])

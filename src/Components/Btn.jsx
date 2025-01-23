@@ -1,5 +1,5 @@
 import React from 'react'
-import './btn.css'
+import '../App.css'
 
 const Btn = ({ medals, setMedals, country, setCountry, setDatas }) => {
     const btnTxt = ['Add Country', 'Update']

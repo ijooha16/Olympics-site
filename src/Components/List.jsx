@@ -1,6 +1,5 @@
-import { useState } from 'react';
 import React from 'react'
-import './List.css'
+import '../App.css'
 import DeleteData from './DeleteData'
 
 const List = ({ datas, setDatas }) => {
@@ -25,8 +24,32 @@ const List = ({ datas, setDatas }) => {
     if (option === 'Bronze') {
       data.sort((a,b) => b[1][2] - a[1][2]);
     }
+    if (option === 'Total') {
+      data.sort((a,b) => b[1].reduce((a,b) => a+b) - a[1].reduce((a,b) => a+b));
+    }
 
     setDatas(data);
+  }
+
+  function listHandler() {
+    if (datas.length === 0) {
+      return (
+        <div className='no_data_alert'>No data yet!</div>
+      )
+    }
+    
+    return datas.map((el, idx) => {
+        return (
+          <div key={el[0]} id={el[0]} className='lists'>
+            <div className='idx'>{idx+1}</div>
+            <div className='country'>{el[0]}</div>
+            <div className='medal'>{el[1][0] || '-'}</div>
+            <div className='medal'>{el[1][1] || '-'}</div>
+            <div className='medal'>{el[1][2] || '-'}</div>
+            <DeleteData idx={idx} setDatas={setDatas}/>
+          </div>
+        )
+    })
   }
   
   return (
@@ -36,7 +59,7 @@ const List = ({ datas, setDatas }) => {
         <div className='country'>Country</div>
         {medal.map((el) => {
           return (
-            <div className='medal'>
+            <div key={el} className='medal'>
               {el}
             </div>
           )
@@ -48,20 +71,10 @@ const List = ({ datas, setDatas }) => {
             <option value="Gold">Gold</option>
             <option value="Silver">Silver</option>
             <option value="Bronze">Bronze</option>
+            <option value="Total">Total</option>
         </select>
       </div>
-      {datas.map((el, idx) => {
-        return (
-          <div id={el[0]} className='lists'>
-            <div className='idx'>{idx+1}</div>
-            <div className='country'>{el[0]}</div>
-            <div className='medal'>{el[1][0] || '-'}</div>
-            <div className='medal'>{el[1][1] || '-'}</div>
-            <div className='medal'>{el[1][2] || '-'}</div>
-            <DeleteData idx={idx} setDatas={setDatas}/>
-          </div>
-        )
-      })}
+      {listHandler()}
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import './input.css'
+import '../App.css'
 
 const Medal = ({ medals, setMedals }) => {
   const rank = ['Gold', 'Silver', 'Bronze']

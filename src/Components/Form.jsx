@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import React from 'react'
-import './Form.css'
-import Country from './input/Country'
-import Medal from './input/Medal'
-import Btn from './btn/Btn'
+import '../App.css'
+import Country from './Country'
+import Medal from './Medal'
+import Btn from './Btn'
 
 const Form = ({ setDatas }) => {
     const [medals, setMedals] = useState(['','',''])

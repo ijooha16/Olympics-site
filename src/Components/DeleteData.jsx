@@ -1,4 +1,5 @@
 import React from 'react'
+import '../App.css'
 
 const DeleteData = ({ idx, setDatas }) => {
     const localData = JSON.parse(localStorage.getItem('olympics')) || [];
