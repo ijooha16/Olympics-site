@@ -6,6 +6,7 @@ const List = ({ datas, setDatas }) => {
   const medal = ['Gold', 'Silver', 'Bronze']
   const localData = JSON.parse(localStorage.getItem('olympics')) || [];
 
+  //정렬 옵션 버튼 핸들러
   const changeHandler = (option) => {
     let data = [...localData]
 
@@ -31,6 +32,7 @@ const List = ({ datas, setDatas }) => {
     setDatas(data);
   }
 
+  //리스트가 없을 때
   function listHandler() {
     if (datas.length === 0) {
       return (

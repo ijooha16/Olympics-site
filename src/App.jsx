@@ -6,6 +6,7 @@ import List from './Components/List'
 function App() {
   const [datas, setDatas] = useState([])
   
+  //시작할 때 리스트 정보 불러오기
   useEffect(() => {
     const localData = JSON.parse(localStorage.getItem('olympics')) || [];
     const sorted = localData.sort((a,b) => b[1][0] - a[1][0])

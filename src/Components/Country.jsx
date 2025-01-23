@@ -1,6 +1,7 @@
 import React from 'react'
 import '../App.css'
 
+//국가 인풋
 const Country = ({ country, setCountry }) => {
   const inputHandler = (e) => {
     setCountry(e.target.value)
